@@ -21,6 +21,10 @@ h1 {
   padding: 10px;
 }
 
+.pt10 {
+  padding-top: 10px;
+}
+
 button {
   background-color: lightgreen;
   border: none;
