@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/app.css">
+
     <title>Comics</title>
 </head>
 
 <body>
-    <h1>COMICS</h1>
+
+    @include('layout')
+
     <div class="flex card-container">
         @foreach ($comics as $comic)
             <div class="card">
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 <h3>{{ $comic->title }}</h3>
-                <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
+                <button class="bg-blue">
+                    <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
+                </button>
             </div>
         @endforeach
     </div>
