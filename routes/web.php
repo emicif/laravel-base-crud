@@ -18,5 +18,4 @@ Route::get('/', function () {
 });
 */
 
-//Route::resource('comics', 'ComicsController'); -> in questo modo devo accedere a http://127.0.0.1:8000/comics
-Route::resource('/', 'ComicsController'); // -> in questo modo accedo a http://127.0.0.1:8000/
+Route::resource('comics', 'ComicsController');

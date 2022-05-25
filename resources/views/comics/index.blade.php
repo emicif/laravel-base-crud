@@ -16,6 +16,7 @@
             <div class="card">
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 <h3>{{ $comic->title }}</h3>
+                <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
             </div>
         @endforeach
     </div>
