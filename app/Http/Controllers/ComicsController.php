@@ -15,6 +15,7 @@ class ComicsController extends Controller
     public function index()
     {
         $data = Comic::all();
+        return vie('comics.index', compact('data'));
     }
 
     /**
