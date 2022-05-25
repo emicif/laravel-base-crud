@@ -14,7 +14,7 @@ class ComicsTableSeeder extends Seeder
     {
         $comics=config('comics');
         foreach($comics as $comic){
-            $newComic = new Comic();
+            $newComic= new Comic();
             $newComic->title = $comic['title'];
             $newComic->description = $comic['description'];
             $newComic->thumb = $comic['thumb'];
