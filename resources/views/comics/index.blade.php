@@ -21,6 +21,9 @@
                 <button class="bg-blue">
                     <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
                 </button>
+                <button class="bg-blue">
+                    <a href="{{ route('comics.edit', $comic->id) }}">MODIFICA</a>
+                </button>
             </div>
         @endforeach
     </div>
@@ -29,6 +32,8 @@
     <button class="bg-blue">
         <a href="{{ route('comics.create') }}">AGGIUNGI NUOVO ELEMENTO</a>
     </button>
+
+
 
 </body>
 
