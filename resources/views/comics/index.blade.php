@@ -26,7 +26,9 @@
     </div>
 
 
-
+    <button class="bg-blue">
+        <a href="{{ route('comics.create') }}">AGGIUNGI NUOVO ELEMENTO</a>
+    </button>
 
 </body>
 
