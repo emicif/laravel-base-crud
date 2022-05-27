@@ -61,14 +61,20 @@ button a {
   background-color: lightblue;
 }
 
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 16.6666666667%;
-  height: 50%;
+  width: 20%;
+  height: 500px;
   padding: 10px;
 }
 
