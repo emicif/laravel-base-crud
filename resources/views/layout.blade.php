@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Comics</title>
 
     <style>
@@ -25,5 +26,10 @@
 </head>
 
 <body>
-    <h1>COMICS</h1>
+
+    @include('header')
+    <main>
+        @yield('content')
+    </main>
+    @include('footer')
 </body>

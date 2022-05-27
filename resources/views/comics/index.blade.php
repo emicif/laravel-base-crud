@@ -11,31 +11,32 @@
 
 <body>
 
-    @include('layout')
+    @section('content')
+        <div class="flex card-container">
+            @foreach ($comics as $comic)
+                <div class="card">
+                    <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                    <h3>{{ $comic->title }}</h3>
+                    <button class="bg-blue">
+                        <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
+                    </button>
+                    <button class="bg-blue">
+                        <a href="{{ route('comics.edit', $comic->id) }}">MODIFICA</a>
+                    </button>
 
-    <div class="flex card-container">
-        @foreach ($comics as $comic)
-            <div class="card">
-                <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
-                <h3>{{ $comic->title }}</h3>
-                <button class="bg-blue">
-                    <a href="{{ route('comics.show', $comic->id) }}">DETTAGLIO</a>
-                </button>
-                <button class="bg-blue">
-                    <a href="{{ route('comics.edit', $comic->id) }}">MODIFICA</a>
-                </button>
-
-            </div>
-        @endforeach
-    </div>
-
-
-    <button class="bg-blue">
-        <a href="{{ route('comics.create') }}">AGGIUNGI NUOVO ELEMENTO</a>
-    </button>
+                </div>
+            @endforeach
+        </div>
 
 
+        <button class="bg-blue">
+            <a href="{{ route('comics.create') }}">AGGIUNGI NUOVO ELEMENTO</a>
+        </button>
 
-</body>
 
-</html>
+
+    </body>
+
+    </html>
+@stop
+@include('layout')
