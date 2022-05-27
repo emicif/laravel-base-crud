@@ -19380,6 +19380,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./script */ "./resources/js/script.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19411,6 +19413,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/script.js":
+/*!********************************!*\
+  !*** ./resources/js/script.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// funzione che richiede all'utente conferma
+var deleteButton = document.querySelectorAll('.delete-button');
+deleteButton.forEach(function (element) {
+  element.addEventListener('click', function ($event) {
+    var answer = confirm('Are you sure?'); // se risposta è no
+
+    if (!answer) {
+      $event.preventDefault();
+    }
+  });
+});
 
 /***/ }),
 

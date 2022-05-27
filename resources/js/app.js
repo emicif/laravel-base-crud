@@ -1,1 +1,9 @@
 require('./bootstrap');
+require('./script');
+
+
+
+
+
+
+
