@@ -24,6 +24,7 @@
                 <button class="bg-blue">
                     <a href="{{ route('comics.edit', $comic->id) }}">MODIFICA</a>
                 </button>
+
             </div>
         @endforeach
     </div>
